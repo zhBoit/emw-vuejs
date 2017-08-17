@@ -10,7 +10,7 @@
             </div>
             <div class="search-bar clear">
                 <div class="search-text">
-                    <input type="text" v-model="searchText" :class="{'input': true, 'is-danger': errors.has('searchText') }" v-validate="'required|shlth:2'" name="searchText">
+                    <input class="zb-border-rad" type="text" v-model="searchText" :class="{'input': true, 'is-danger': errors.has('searchText') }" v-validate="'required|shlth:2'" name="searchText">
                 </div>
                 <button class="search bth-style" :disabled="sbtnDisabled" @click="search()">搜索公司</button>
                 <span v-show="errors.has('searchText')" class="help-tip">{{errors.first('searchText')}}</span>
@@ -173,4 +173,8 @@ export default {
     .zb-click-more {
         line-height: 30px;
     }
+    .event-con .zb-border-rad {
+        border-radius: 4px 0 0 4px;
+    }
+
 </style>
